@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="green">GREEN</button>
+    <button id="red">RED</button>
+    <script>
+       
+        // function init(){
+        //     let name ="Mozilla";
+        //     function displayName(){
+        //         console.log(name);
+        //     } 
+        //     displayName()
+        // }
+        // init();
+
+        // function outer(){
+        //     let username="zain"
+        //     function inner(){
+        //         console.log("INNER", username);
+        //     }
+        //     function innerTwo(){
+        //         console.log("TWO", username);
+        //     }
+        //     inner()
+        // }
+        // console.log("TOO OUTER", username);
+    //    document.getElementById('green').onclick=function(){
+    //     document.body.style.backgroundColor='green'
+    //    }
+    //    document.getElementById('red').onclick=function(){
+    //     document.body.style.backgroundColor='red'
+    //    }
+    function clickHandler(color){
+        // document.body.style.color.backgroundColor= `${color}`
+        return function(){
+            document.body.style.backgroundColor=`${color}`
+        }
+    }
+     document.getElementById('green').onclick= clickHandler('green')
+     document.getElementById('red').onclick= clickHandler('red')
+    </script>
+</body>
+</html>
